@@ -2,7 +2,7 @@
 ```
 yum install git gcc make cjson cjson-devel
 
-git -C /opt clone git@github.com:konradziczek/libvirttui-uftp.git
+git -C /opt clone git@github.com:konradziczek/libvirttui-uftp.git /opt/uftp
 
 /opt/uftp/setup.sh
 ```
