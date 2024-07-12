@@ -1,0 +1,12 @@
+.idea
+.gitconfig
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.cache
+.config
+.cargo
+
+uftp
+uftp_client.log
