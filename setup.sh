@@ -43,6 +43,16 @@ if ! rpm -q "cjson-devel" &>/dev/null; then
     exit 1
 fi
 
+if ! rpm -q "openssl" &>/dev/null; then
+    echo "ERROR: Package openssl is not installed."
+    exit 1
+fi
+
+if ! rpm -q "openssl-devel" &>/dev/null; then
+    echo "ERROR: Package openssl-devel is not installed."
+    exit 1
+fi
+
 echo -n "Creating user... "
 if ! grep -q "^uftp:" /etc/passwd; then
     useradd -d /opt/uftp --system uftp
