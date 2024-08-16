@@ -1,6 +1,6 @@
 # Installation
 ```
-yum install git gcc make cjson cjson-devel
+yum install git gcc make cjson cjson-devel openssl openssl-devel
 
 firewall-cmd --permanent --add-port=1044/udp
 
