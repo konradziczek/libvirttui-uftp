@@ -54,7 +54,7 @@ fi
 
 echo -n "Preparing uftp... "
 
-killall -q -r uftpd
+killall -q -r uftpd || true
 rm -r -f /opt/uftp/uftp
 tar -C /opt/uftp -zxvf /opt/uftp/uftp-5.0.3.tar.gz >/dev/null
 mv /opt/uftp/uftp-5.0.3 /opt/uftp/uftp
