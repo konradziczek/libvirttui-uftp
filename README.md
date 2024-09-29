@@ -16,7 +16,7 @@ git -C /opt clone https://github.com/konradziczek/libvirttui-uftp.git /opt/uftp
 
 # Updating
 ```
-git -C /opt/uftp pull
+sudo -u uftp git -C /opt/uftp pull
 
 /opt/uftp/setup.sh
 ```
