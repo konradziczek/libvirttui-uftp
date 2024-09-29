@@ -75,6 +75,7 @@ sed -i 's/^UFTPD_OBJS=/UFTPD_OBJS=image_file_accepted.o /g' /opt/uftp/uftp/makef
 
 sed -i 's/^\#include \"client_transfer.h\"/\#include \"client_transfer.h\"\n\n\#include \"image_file_accepted.h\"/' /opt/uftp/uftp/client_fileinfo.c
 sed -i 's/^        if (skip) {/        if (!image_file_accepted(group)) { skip = 1; }\n        if (skip) {/' /opt/uftp/uftp/client_fileinfo.c
+sed -i 's/^        glog2(group, "copying new file");/        if (!image_file_accepted(group)) { glog2(group, "skipping file"); early_complete(group, COMP_STAT_SKIPPED, 0); return 1; }\n\n        glog2(group, "copying new file");/' /opt/uftp/uftp/client_fileinfo.c
 
 cp /opt/uftp/assets/image_file_accepted.c /opt/uftp/uftp/
 cp /opt/uftp/assets/image_file_accepted.h /opt/uftp/uftp/
