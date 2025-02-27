@@ -102,7 +102,7 @@ echo "OK"
 echo -n "Running chmods and chowns... "
 
 chown -R uftp:uftp /opt/uftp
-chown -R uftp:libvirttui /opt/virt_data/images
+chown uftp:libvirttui /opt/virt_data/images
 
 chmod 700 /opt/uftp
 chmod -R 775 /opt/virt_data/images
